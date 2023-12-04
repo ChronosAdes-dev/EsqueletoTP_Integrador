@@ -30,9 +30,7 @@ public class NuevoOradorController extends HttpServlet{
 		String apellido = request.getParameter("apellido");
 		String email = request.getParameter("email");
 		String tema = request.getParameter("tema");
-		
-		//validar!!!
-		
+
 		//creo mi orador con esos paramtros
 		Orador nuevo = new Orador(nombre, apellido, email, tema, LocalDate.now());
 		
@@ -41,7 +39,6 @@ public class NuevoOradorController extends HttpServlet{
 		
 		repository.save(nuevo);
 		
-		//ahora respondo al front
 		//response.getWriter().print("OK");//json
 	}
 
